@@ -66,6 +66,10 @@
   <script>
     var swiper = new Swiper('.swiper-container', {
       effect: 'coverflow',
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
       grabCursor: true,
       centeredSlides: true,
       slidesPerView: 'auto',
