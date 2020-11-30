@@ -194,8 +194,9 @@ section {
   }
 
   .textBox,
-  .textImg {
+  .imgBox {
     max-width: 100%;
+
   }
 
   .swiper-slide {
