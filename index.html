@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Coca-cola</title>
+</head>
+
+<body>
+  <section class="section">
+    <div class="circle">
+    </div>
+    <header class="header__body">
+      <a href="#">
+        <img src="images/logo.png" alt="" class="header__logo">
+      </a>
+      <div class="toggle" onclick="toggleMenu()"></div>
+      <ul class="header__menu">
+        <li><a href="">Головна</a></li>
+        <li><a href="">Меню</a></li>
+        <li><a href="">Новини</a></li>
+        <li><a href="">Зв'язатися з нами</a></li>
+      </ul>
+      <!-- /.header__menu -->
+
+      <!-- /.header__logo -->
+    </header>
+    <!-- /.header__body -->
+    <div class="content">
+      <div class="textBox">
+        <h2>
+          Оригінальний смак
+        </h2>
+        <p>Coca‑Cola — це напій, який кожний момент робить особливим, це досвід, яким хочеться поділитися з друзями, це
+          відчуття
+          єдиного духу. Coca‑Cola – це магія смаку, унікальна рецептура та неповторна форма пляшечки, яку неможливо
+          сплутати з
+          іншою.</p>
+        <a href="">Дізнатися більше</a>
+      </div>
+      <div class="imgBox">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/cocacola1.png" alt=""></div>
+            <div class="swiper-slide"><img src="images/cocacola2.png" alt=""></div>
+            <div class="swiper-slide"><img src="images/cocacola3.png" alt=""></div>
+            <div class="swiper-slide"><img src="images/cocacola4.png" alt=""></div>
+            <div class="swiper-slide"><img src="images/cocacola5.png" alt=""></div>
+            <div class="swiper-slide"><img src="images/cocacola6.png" alt=""></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="sci">
+      <a href=""><img src="images/facebook.png" alt=""></a>
+      <a href=""><img src="images/instagram.png" alt=""></a>
+      <a href=""><img src="images/twitter.png" alt=""></a>
+    </div>
+  </section>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      loop: true,
+    });
+
+    function toggleMenu(params) {
+
+      const menuToggle = document.querySelector('.toggle');
+      const navugation = document.querySelector('.header__menu');
+      menuToggle.classList.toggle('active')
+      navugation.classList.toggle('active')
+
+    }
+  </script>
+</body>
+
+</html>
